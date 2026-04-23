@@ -1,8 +1,4 @@
----
 
-# ✅ README.md (FULL DETAILED)
-
-```md
 # Find-S and Candidate Elimination Algorithms (Case Study + Implementation)
 
 ## 📌 Project Overview
