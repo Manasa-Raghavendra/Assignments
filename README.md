@@ -10,7 +10,7 @@ This project is a complete case study and Python implementation of two important
 In addition to implementation, this project also demonstrates **five situations where the Version Space becomes impossible to obtain** (i.e., Version Space becomes empty).
 
 The project includes:
-- Dataset creation (custom dataset, not EnjoySport/PlayTennis)
+- Dataset creation
 - Step-by-step tracing output in terminal
 - Python implementation of both algorithms
 - Failure case simulation for version space collapse
