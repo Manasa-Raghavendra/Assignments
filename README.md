@@ -335,7 +335,4 @@ College: Maharaja Institute of Technology Mysore
 
 ---
 
-````
-
-
 
