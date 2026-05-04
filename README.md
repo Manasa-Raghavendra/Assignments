@@ -16,14 +16,14 @@ The project includes:
 - Failure case simulation for version space collapse
 - Detailed explanation for theory and working
 
----
+
 
 ## 🎯 Aim of the Project
 To implement Find-S and Candidate Elimination algorithms and analyze their behavior on:
 - Normal consistent dataset
 - Five inconsistent datasets where version space becomes empty
 
----
+
 
 # 1️⃣ Background Theory
 
@@ -45,7 +45,7 @@ Example:
 Here, the goal is to learn the concept:
 > "Under what conditions will a person buy a laptop?"
 
----
+
 
 ## 1.2 Hypothesis
 A **hypothesis (h)** is a possible rule that predicts the target class.
@@ -60,7 +60,7 @@ Meaning:
 - RAM must be 16GB
 - Storage can be anything
 
----
+
 
 ## 1.3 Hypothesis Space (H)
 The **Hypothesis Space (H)** is the set of all possible hypotheses that the learner can represent.
@@ -71,7 +71,7 @@ Example hypotheses in H:
 - ⟨?, Gaming, ?, ?, ?⟩
 - ⟨?, ?, ?, ?, ?⟩
 
----
+
 
 ## 1.4 Version Space (VS)
 The **Version Space** is the subset of hypotheses from H that are **consistent with all training examples**.
@@ -84,7 +84,7 @@ So:
 
 **Version Space = { h ∈ H | h is consistent with training data }**
 
----
+
 
 ## 1.5 Why Find-S and Candidate Elimination?
 
@@ -100,7 +100,7 @@ So:
   - **S boundary**: Most specific consistent hypothesis
   - **G boundary**: Most general consistent hypothesis
 
----
+
 
 # 2️⃣ Dataset Used
 
@@ -119,7 +119,7 @@ A custom dataset is used (not EnjoySport/PlayTennis).
 ### Target Attribute
 - BuyLaptop ∈ {Yes, No}
 
----
+
 
 ### Training Dataset
 
@@ -131,7 +131,7 @@ A custom dataset is used (not EnjoySport/PlayTennis).
 | High   | Gaming  | Dell   | 16GB | HDD     | Yes      |
 | Low    | Office  | HP     | 8GB  | HDD     | No       |
 
----
+
 
 # 3️⃣ Find-S Algorithm
 
@@ -145,7 +145,7 @@ Find-S starts with the most specific hypothesis and generalizes it only when nec
 3. Ignore all negative examples.
 4. Final h is the output.
 
----
+
 
 ## 3.2 Pseudocode
 ```
@@ -162,7 +162,7 @@ Return h
 
 ```
 
----
+
 
 # 4️⃣ Candidate Elimination Algorithm
 
@@ -177,7 +177,7 @@ Most general hypothesis consistent with all training examples.
 
 Version Space lies between S and G.
 
----
+
 
 ## 4.2 Pseudocode
 ```
@@ -201,7 +201,7 @@ Return S and G
 
 ```
 
----
+
 
 # 5️⃣ Version Space Failure Cases (5 Situations)
 
@@ -209,7 +209,7 @@ Version Space becomes empty when no hypothesis exists that can satisfy all train
 
 This happens due to:
 
----
+
 
 ## Case 1: Contradictory Labels
 Same input has different labels.
@@ -222,7 +222,7 @@ Example:
 
 Result: Version Space = ∅
 
----
+
 
 ## Case 2: Noise / Wrong Label
 Wrong labeling introduces inconsistency.
@@ -236,7 +236,7 @@ Example:
 
 Result: Version Space = ∅
 
----
+
 
 ## Case 3: Concept Not Representable
 If hypothesis space supports only conjunction, OR-based concepts cannot be represented.
@@ -246,7 +246,7 @@ Buy = Yes if Budget = High OR Purpose = Gaming
 
 Result: Version Space = ∅
 
----
+
 
 ## Case 4: S becomes too general early
 Positive examples force S to become completely general.
@@ -254,14 +254,14 @@ Then negative examples cannot be excluded.
 
 Result: Version Space = ∅
 
----
+
 
 ## Case 5: Boundary Crossing
 When S and G boundaries cannot be maintained (S becomes more general than G), version space collapses.
 
 Result: Version Space = ∅
 
----
+
 
 # 6️⃣ Project Folder Structure
 
@@ -278,7 +278,7 @@ FindS_CandidateElimination_CaseStudy/
 
 ````
 
----
+
 
 # 7️⃣ How to Run This Project
 
@@ -294,7 +294,7 @@ cd FindS_CandidateElimination_CaseStudy
 python main.py
 ```
 
----
+
 
 # 8️⃣ Output Explanation
 
@@ -310,7 +310,7 @@ python main.py
 
 * Shows at which step Version Space becomes empty.
 
----
+
 
 # 9️⃣ Technologies Used
 
@@ -318,14 +318,14 @@ python main.py
 * Basic terminal output tracing
 * No external libraries required
 
----
+
 
 # 🔟 Conclusion
 
 This project demonstrates the practical implementation of Find-S and Candidate Elimination algorithms.
 It also proves that version space can become empty due to contradictions, noise, and limitations of hypothesis representation.
 
----
+
 
 # 📌 Author
 
